@@ -1,0 +1,32 @@
+Topics:
+
+Perceptron
+
+Linear/logistic regression
+Activation/loss functions
+
+Gradient Descent + Learning Rates & Convergence
+
+Evaluation Metrics + Cross-Validation
+
+Lecture:
+
+Should contain illustrations, questions, etc
+
+Exercise:
+
+Should contain a story
+Illustrate the need for:
+- seperate training/eval set
+- different metrics (e.g. accuracy vs precision)
+- different losses
+
+Maybe start with something normal (where accuracy/standard loss are fine) then continue to somewhere unbalanced (e.g. diagonizing diseases)
+
+Also explain the pareto front: if one model is better at both precision and recall...
+
+Maybe
+- implement everything from scratch?
+- start with linear
+- then go to balanced binary classification, then unbalanced... show how each model is doing via different metrics, to convince why they are important
+- show a model that is doing better in both aspects, maybe

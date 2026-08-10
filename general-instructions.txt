@@ -1,0 +1,5 @@
+- Exercises should all be in .ipynb format, should contain most of the 'boring' and 'not-ml'y code already coded (e.g. loading datasets, general outline of classes)
+- Should demonstrate concepts that was learn in the course (e.g. actually showing that it is important to evaluate on a seperate set)
+- At least in some cases, have a final number (e.g. accuracy) so students can compete who made the best model or compare there answers
+- Everything, including the slides and the exercises, should be intuitive enough for people without deep mathematical knowledge. So no e.g. set theory notation.
+- The students know basic python, numpy, panda

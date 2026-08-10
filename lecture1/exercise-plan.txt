@@ -1,0 +1,104 @@
+LECTURE 1 EXERCISE PLAN - SUMMARY
+=================================
+
+Title
+-----
+The Screening Clinic: Build a Useful Classifier, Not Just an Accurate One
+
+Format
+------
+- Deliverable after approval: one self-contained Jupyter notebook,
+  lecture1/exercise.ipynb, requiring no downloads or API keys.
+- Audience: students who know basic Python and NumPy but do not need advanced
+  mathematics.
+- Classroom duration: 3 hours or longer. The complete route contains about
+  3 hours 55 minutes of work, so partial completion is expected and acceptable.
+- Students may work individually or in pairs.
+
+Story
+-----
+Students work with fully synthetic data from a fictional clinic:
+1. Linear regression predicts a patient's recovery time in days from measurements
+   such as symptom severity, age, and biomarker level.
+2. Logistic regression uses individual patient measurements to estimate whether
+   each person should receive follow-up testing.
+3. The real clinic population has only about 8% positive cases, revealing why
+   high accuracy alone can be misleading.
+
+The regression task begins with a one-feature option using symptom severity to
+predict recovery time. This produces a clear 2D scatter plot and fitted line.
+Students can then switch to a multi-feature version using the same NumPy model.
+The later classification task reuses the linear score Xw + b and adds a sigmoid
+to produce an individual probability. The notebook will clearly state that the
+data and model are educational and not suitable for real medical decisions.
+
+Exercise flow
+-------------
+0. Setup and story - 10 minutes
+   Load the supplied synthetic datasets, inspect shapes/features, and distinguish
+   the recovery-time regression output from the diagnosis output.
+
+1. Linear regression - 30 minutes
+   First use only symptom severity to predict recovery days, producing a simple
+   scatter plot with a fitted line. Implement Xw + b with NumPy, adjust the
+   weight and bias manually, and interpret the graph. Then optionally select
+   several features and reuse the same implementation without the 2D line plot.
+
+2. Train linear regression from zero - 40 minutes
+   Implement MSE, weight/bias gradients, and gradient descent with NumPy. Compare
+   slow, useful, and unstable learning rates using training and held-out loss.
+
+3. Move to individual probabilities - 30 minutes
+   Move from the continuous recovery-time target to binary diagnosis. Reuse the
+   linear score, implement a numerically stable sigmoid, interpret its outputs
+   as probabilities, and apply a decision threshold.
+
+4. Train logistic regression from zero - 30 minutes
+   Implement BCE and logistic gradients with NumPy, reuse the gradient-descent
+   structure
+
+5. The accuracy trap and threshold training - 40 minutes
+   Compare the classifier with an always-negative baseline on imbalanced data.
+   Implement and interpret accuracy, precision, recall, F1, and F2 from confusion
+   matrix counts. The baseline should achieve about 92% accuracy but zero recall.
+   Keep the already-trained logistic model fixed and train only its decision
+   threshold on validation predictions. Implement an asymmetric decision loss
+   that assigns separate costs to false negatives and false positives. Sweep
+   candidate thresholds with NumPy, select the threshold with the lowest
+   validation loss, and compare it with the default threshold of 0.5. The clinic
+   scenario makes missing a sick patient more costly than requesting an
+   unnecessary follow-up.
+
+6. Honest evaluation and cross-validation - 40 minutes
+   Separate training, model selection, and final testing. Complete a NumPy
+   5-fold cross-validation outline, compare learning rates/training durations,
+   aggregate fold scores, and repeat threshold selection using only validation
+   or out-of-fold predictions. After model settings and threshold are frozen,
+   evaluate the untouched test set exactly once and report accuracy, precision,
+   recall, F1, F2, and asymmetric decision loss.
+
+Implementation split
+--------------------
+Students implement the concept-bearing work with NumPy:
+- Linear and logistic forward passes, sigmoid, MSE, and BCE.
+- Gradients and gradient-descent updates for both models.
+- Metric formulas, asymmetric false-positive/false-negative decision loss,
+  threshold optimization, cross-validation aggregation, model selection, and
+  written interpretations.
+
+The notebook supplies the non-ML plumbing:
+- Synthetic data generation, reproducible shuffling/splits, scaling, tables,
+  plots, loop outlines, gradient formulas, fold construction, assertions, hints,
+  and experiment bookkeeping.
+- pandas may format tables and matplotlib may plot results, but all model, loss,
+  optimization, metric, split, and selection logic uses NumPy. No perceptron or
+  scikit-learn model is included.
+
+Completion and quality rules
+----------------------------
+- Each section ends at a useful stopping point and includes a short reflection.
+- TODOs are focused, with sanity checks and optional hints.
+- Students are not required to reach every section.
+- Final implementation will be checked for numerical stability, correct metrics
+  and threshold selection, strict test-set isolation, reproducible intended
+  results, and reasonable CPU runtime.
