@@ -1,0 +1,20 @@
+Support Vector Machines (SVM)
+
+Backpropagation + Multi-Layer Perceptrons (MLP) & vanishing/exploding gradients+A bit about weight initialization
+
+Convergence & Learning Rates
+
+SGD (Mini-Batch GD)
+
+first task: the data is linear (multipoint) with noise (don't tell that to the students), students should figure out that it's better to use a linear network (have a reflection question on that)
+also dont have too many data points/have large range so larger models will struggle
+
+and one where the data is nonlinear, and students students have to create a stupid model - too long and not very wide.
+Student will have to make it reach a reasonable performance with minimum cost.
+They can do things like decrease the network length, add residual connections, turn sigmoid into Relu/LeakyRelu (the second is more costly), for a cost
+Make sure the exercise 'works' in the sense that the original doesn't solve the task but can be made to do it
+Maybe have mnist as the task (still linked to the story!)
+
+Finally, there will be the exercise called The Allocation Helm from lesswrong.
+
+Make the tasks feel different from each other. Maintain a coherent story tho.

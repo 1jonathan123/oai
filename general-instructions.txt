@@ -1,5 +1,19 @@
-- Exercises should all be in .ipynb format, should contain most of the 'boring' and 'not-ml'y code already coded (e.g. loading datasets, general outline of classes)
+- Exercises should all be in .ipynb format, should contain most of the 'boring' and 'not-ml'y code already coded (e.g. loading datasets)
+- Do leave a bit 'boring' code for students to do, e.g. presenting a few points to get intuition, graph, run the model themselves, etc
+- Have a clear motivation story throught the exercise, preferably single one
+- Topics for the exercise are not rigid, it is okay to let student explore a bit, and not every single topics must be in the exercise (for the lecture it's more rigid of course) 
+- Mark clearly which blocks are TODO and which blocks are RUN ONLY
 - Should demonstrate concepts that was learn in the course (e.g. actually showing that it is important to evaluate on a seperate set)
 - At least in some cases, have a final number (e.g. accuracy) so students can compete who made the best model or compare there answers
+- The way to solve the exercise should not be trivial: students should try to figure 'which model is the best, how many layers, how to utilize the data optimally'
+- Also, maybe think about what is more cool and try to make the exercise a bit cool (e.g. classifing hand written digits is more cool than just random data, tho also the latter may be needed)
+- First create a concise exercise plan txt, let me confirm it, and only them make the actual ipynb
 - Everything, including the slides and the exercises, should be intuitive enough for people without deep mathematical knowledge. So no e.g. set theory notation.
-- The students know basic python, numpy, panda
+- The students already know basic python, numpy, panda
+- have a (very) few reflection questions if appropriate
+
+
+- Slides should contain short text bullets, and, when relevant, illustrations. Should be written in latex. Slides should start with intuitive explanation on what we gonna see today, why is it important/nontrivial/etc
+- Have one or two questions in the slides, like 'how can this be accoplished' (e.g. how can we train a computer program from examples?)
+- Think carefully about the order of the presentation, what will be easiest and most natural, and how polished yet simple slides should look like
+- When finishing making the presentation, take another look on the final order and see whether it needs to change to be better. If so, do it.

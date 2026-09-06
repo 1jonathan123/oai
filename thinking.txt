@@ -1,0 +1,3 @@
+There are two interesting exercises that don't require sequences, maybe we can use them for 2&3
+The Allocation Helm
+Then D-d-d-data!
