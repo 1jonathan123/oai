@@ -11,6 +11,7 @@
 - Everything, including the slides and the exercises, should be intuitive enough for people without deep mathematical knowledge. So no e.g. set theory notation.
 - The students already know basic python, numpy, panda
 - have a (very) few reflection questions if appropriate
+- generally do not provide hints
 
 
 - Slides should contain short text bullets, and, when relevant, illustrations. Should be written in latex. Slides should start with intuitive explanation on what we gonna see today, why is it important/nontrivial/etc
