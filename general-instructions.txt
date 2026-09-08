@@ -12,7 +12,10 @@
 - The students already know basic python, numpy, panda
 - have a (very) few reflection questions if appropriate
 - generally do not provide hints
-
+- the ML lib should be pytorch
+- Unless said otherwise, don't drag students by the noise too much. If they want to visualize, standarize, etc, they should do most of it on there own (maybe except things like dataset shape, images visualization, etc)
+- Do not have time limits or something
+- student should use just simple torch here (no need to write that explicitly, but don't guide them to use automatic network architecture)
 
 - Slides should contain short text bullets, and, when relevant, illustrations. Should be written in latex. Slides should start with intuitive explanation on what we gonna see today, why is it important/nontrivial/etc
 - Have one or two questions in the slides, like 'how can this be accoplished' (e.g. how can we train a computer program from examples?)
